@@ -1,0 +1,139 @@
+{
+    "key": "group_5c4b64d5a12fe",
+    "title": "Talent Layout Attributes",
+    "fields": [
+        {
+            "key": "field_5c4b768f654e8",
+            "label": "Grids",
+            "name": "grids",
+            "type": "repeater",
+            "instructions": "Create the talent grid by constructing its rows and columns.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Grid",
+            "sub_fields": [
+                {
+                    "key": "field_5c4f8860846f8",
+                    "label": "Talent Type",
+                    "name": "talent_type",
+                    "type": "taxonomy",
+                    "instructions": "Link the grid to a tab.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "talent-type",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "multiple": 0
+                },
+                {
+                    "key": "field_5c4b7744654eb",
+                    "label": "Rows",
+                    "name": "rows",
+                    "type": "repeater",
+                    "instructions": "Create the talent rows.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c4b7790654ec",
+                            "label": "Columns",
+                            "name": "columns",
+                            "type": "relationship",
+                            "instructions": "Select and organize the talent posts.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "80",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "talent"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
+                        },
+                        {
+                            "key": "field_5ce589215981b",
+                            "label": "Layout Options",
+                            "name": "layout_options",
+                            "type": "checkbox",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "lead-card": "Lead Cards"
+                            },
+                            "allow_custom": 0,
+                            "default_value": [],
+                            "layout": "horizontal",
+                            "toggle": 0,
+                            "return_format": "value",
+                            "save_custom": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-layout"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Talent Layout Options Page Attributes",
+    "modified": 1559242907
+}

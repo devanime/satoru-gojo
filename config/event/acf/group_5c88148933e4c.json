@@ -1,0 +1,46 @@
+{
+    "key": "group_5c88148933e4c",
+    "title": "Genre",
+    "fields": [
+        {
+            "key": "field_5c8814b4a7638",
+            "label": "Genre",
+            "name": "genres",
+            "type": "taxonomy",
+            "instructions": "Set the genre(s) for this event.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "genre",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Event Producer: Event Custom Post Type Taxonomy",
+    "modified": 1564073611
+}

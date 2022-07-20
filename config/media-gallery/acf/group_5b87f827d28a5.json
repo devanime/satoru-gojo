@@ -1,0 +1,176 @@
+{
+    "key": "group_5b87f827d28a5",
+    "title": "Media Gallery Attributes",
+    "fields": [
+        {
+            "key": "field_5b884cf2e29fe",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<em>Captions can be set in the image meta \"captions\" field. Videos may use the video title instead.<\/em>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5b8805329eb83",
+            "label": "Photo Captions",
+            "name": "photo_captions",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show photo captions",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5b884bc62927d",
+            "label": "Video Thumbnail Captions",
+            "name": "video_thumbnail_captions",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": [
+                "Don't show",
+                "Use video title",
+                "Use video's featured image caption field"
+            ],
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": 1,
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5b88058a59b24",
+            "label": "Media",
+            "name": "media",
+            "type": "flexible_content",
+            "instructions": "Register videos under <a href=\"edit.php?post_type=video\" target=\"_blank\">Media > Videos<\/a>.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5b88059710bb1": {
+                    "key": "5b88059710bb1",
+                    "name": "photos",
+                    "label": "Photos",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b8805cb59b27",
+                            "label": "Photos",
+                            "name": "photos",
+                            "type": "gallery",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 1,
+                            "max": "",
+                            "insert": "append",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5b8805be59b26": {
+                    "key": "layout_5b8805be59b26",
+                    "name": "videos",
+                    "label": "Videos",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b88072059b28",
+                            "label": "Videos",
+                            "name": "videos",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "video"
+                            ],
+                            "taxonomy": [],
+                            "filters": [
+                                "search"
+                            ],
+                            "elements": [
+                                "featured_image"
+                            ],
+                            "min": "",
+                            "max": "",
+                            "return_format": "id"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Media",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "media-gallery"
+            }
+        ]
+    ],
+    "menu_order": 90,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Media Gallery Custom Post Type Attributes - Satoru Gojo Plugin",
+    "modified": 1553354463
+}

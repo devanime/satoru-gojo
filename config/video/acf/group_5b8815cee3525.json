@@ -1,0 +1,40 @@
+{
+    "key": "group_5b8815cee3525",
+    "title": "Video Attributes",
+    "fields": [
+        {
+            "key": "field_5b8815f70634d",
+            "label": "Video",
+            "name": "video",
+            "type": "oembed",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "video"
+            }
+        ]
+    ],
+    "menu_order": 90,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Video Custom Post Type Attributes - Satoru Gojo Plugin",
+    "modified": 1535654382
+}

@@ -1,0 +1,54 @@
+{
+    "options": {
+        "video": {
+            "page_title": "Video",
+            "parent_slug": "acf-config"
+        }
+    },
+    "custom_post_types": {
+        "video": {
+            "labels": {
+                "singular_name": "Video",
+                "featured_image": "Thumbnail",
+                "all_items": "Videos"
+            },
+            "args": {
+                "public": false,
+                "exclude_from_search": true,
+                "publicly_queryable": true,
+                "show_ui": true,
+                "show_in_nav_menus": false,
+                "show_in_menu": "upload.php",
+                "show_in_admin_bar": true,
+                "hierarchical": false,
+                "has_archive": false,
+                "rewrite": false,
+                "can_export": false,
+                "show_in_rest": false,
+                "supports": [
+                    "title",
+                    "editor",
+                    "thumbnail"
+                ],
+                "menu_position": 2
+            },
+            "extras": {
+                "default_sort": {
+                    "orderby": "date",
+                    "order": "DESC"
+                },
+                "title_placeholder": "Enter video title here (optional)",
+                "admin_columns": {
+                    "thumbnail": {
+                        "label": "Thumbnail",
+                        "sortable": false
+                    },
+                    "title": {
+                        "label": "Title",
+                        "sortable": true
+                    }
+                }
+            }
+        }
+    }
+}

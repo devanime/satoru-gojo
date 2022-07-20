@@ -1,0 +1,9 @@
+{
+    "options": {
+        "messaging": {
+            "page_title": "Messaging",
+            "menu_title": "Messaging",
+            "parent_slug": "options-general.php"
+        }
+    }
+}

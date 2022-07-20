@@ -1,0 +1,43 @@
+{
+    "key": "group_5c926d4b9db73",
+    "title": "Availability Attributes",
+    "fields": [
+        {
+            "key": "field_5c926d597d81a",
+            "label": "Set as \"Sold Out\" state?",
+            "name": "sold_out_state",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "availability"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Event Producer: Event Custom Post Type Attributes",
+    "modified": 1564073600
+}

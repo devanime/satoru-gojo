@@ -1,0 +1,58 @@
+{
+    "key": "group_5cddc2600e322",
+    "title": "Venue Details",
+    "fields": [
+        {
+            "key": "field_5cddc294a4908",
+            "label": "Address",
+            "name": "address",
+            "type": "text",
+            "instructions": "Set the venue address.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cddc2cfa4909",
+            "label": "Google Maps Link",
+            "name": "google_maps_link",
+            "type": "link",
+            "instructions": "Set the google maps link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "venue"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Event Producer: Venue Custom Post Type Attributes",
+    "modified": 1564073622
+}

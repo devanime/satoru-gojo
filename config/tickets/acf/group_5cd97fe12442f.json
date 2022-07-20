@@ -1,0 +1,229 @@
+{
+    "key": "group_5cd97fe12442f",
+    "title": "Calendar Layout",
+    "fields": [
+        {
+            "key": "field_5c5341d7927ce",
+            "label": "Swap Calendar with Ticketing Tips?",
+            "name": "calendar_swap",
+            "type": "true_false",
+            "instructions": "By default the calendar will appear on the left and the ticketing tips on the right. Select \"Yes\" to swap their composition.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c534038c1018",
+            "label": "Headline",
+            "name": "calendar_headline",
+            "type": "wysiwyg",
+            "instructions": "Set a headline above both the calendar (and ticketing tips) container.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "wysiwyg-h-100",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5cd5b6fc6d010",
+            "label": "Tagline",
+            "name": "calendar_tagline",
+            "type": "wysiwyg",
+            "instructions": "Set an optional tagline.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "wysiwyg-h-100",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5c53404dc1019",
+            "label": "Ticketing Tips",
+            "name": "calendar_ticketing_tips",
+            "type": "repeater",
+            "instructions": "Click \"Add Tip\" to begin.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Tip",
+            "sub_fields": [
+                {
+                    "key": "field_5c534064c101a",
+                    "label": "Headline",
+                    "name": "headline",
+                    "type": "text",
+                    "instructions": "Set the headline of the ticketing tip.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c534080c101b",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "Set the content of the ticketing tip.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "wysiwyg-h-100",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5c53408ec101c",
+                    "label": "Call To Action",
+                    "name": "cta",
+                    "type": "link",
+                    "instructions": "Set an optional call to action. This will sit beneath the content.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_5c5340a0c101d",
+            "label": "Additional Tips",
+            "name": "calendar_additional_tips",
+            "type": "repeater",
+            "instructions": "Click \"Add Tip\" to begin. These tips will live beneath of the ticketing tip container.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Tip",
+            "sub_fields": [
+                {
+                    "key": "field_5c5340b5c101e",
+                    "label": "Headline",
+                    "name": "headline",
+                    "type": "text",
+                    "instructions": "Set the headline of the ticketing tip.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c5340c5c101f",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "Set the content of the ticketing tip.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "wysiwyg-h-100",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5c5340d0c1020",
+                    "label": "Call To Action",
+                    "name": "cta",
+                    "type": "link",
+                    "instructions": "Set an optional call to action. This will sit beneath the content.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-calendar-options"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Calendar Layout Attributes",
+    "modified": 1557758558
+}

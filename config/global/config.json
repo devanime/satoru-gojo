@@ -1,0 +1,13 @@
+{
+    "options": {
+        "config": {
+            "page_title": "Config",
+            "position": 58,
+            "icon_url": "dashicons-admin-generic"
+        },
+        "global": {
+            "page_title": "Global",
+            "parent_slug": "acf-config"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "devanime/satoru-gojo",
+    "description": "A DevAnime plugin containing a collection of content management models.",
+    "authors": [
+        {
+            "name": "DevAnime",
+            "email": "devanimecards@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.devanimecards.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DevAnime\\SatoruGojo\\": "src"
+        }
+    },
+    "type": "wordpress-plugin",
+    "require": {
+        "php": "^7.0",
+        "devanime/devanime": "*",
+        "vimeo/vimeo-api": "2.*",
+        "madcoda/php-youtube-api": "*"
+    }
+}

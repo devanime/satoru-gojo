@@ -1,0 +1,1554 @@
+{
+    "key": "group_5c07fe0514509",
+    "title": "Message Attributes",
+    "fields": [
+        {
+            "key": "field_5c0802c454722",
+            "label": "Enable Messaging?",
+            "name": "enable_messaging",
+            "type": "true_false",
+            "instructions": "Display a message that will appear site-wide.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_61f972be22f20",
+            "label": "Multiple Messages",
+            "name": "multiple_messages",
+            "type": "true_false",
+            "instructions": "Configure multiple message assignments.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_61eee0cb611e5",
+            "label": "Message Assigments",
+            "name": "global_message_assignments",
+            "type": "repeater",
+            "instructions": "Set any number of global messages. Please select the message type and location.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61f972be22f20",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Message",
+            "sub_fields": [
+                {
+                    "key": "field_61f88bdb7dcef",
+                    "label": "",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "<p style=\"font-weight: bold; font-size: 18px;\">Message<\/p>",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_61ef38e935091",
+                    "label": "Schedule",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_61eeeaac388a5",
+                    "label": "Start Date\/Time",
+                    "name": "datetime_start",
+                    "type": "date_time_picker",
+                    "instructions": "Set the message start date and time.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "F j, Y g:i a",
+                    "return_format": "Y-m-d H:i:s",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_61eeeb40388a6",
+                    "label": "End Date\/Time",
+                    "name": "datetime_end",
+                    "type": "date_time_picker",
+                    "instructions": "Set the message end date and time.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "F j, Y g:i a",
+                    "return_format": "Y-m-d H:i:s",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_61eeeb68388a7",
+                    "label": "Cookie Expiry",
+                    "name": "cookie_expiry",
+                    "type": "group",
+                    "instructions": "Set to zero to create a session cookie instead of time-based expiration.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61eeeb7e388a8",
+                            "label": "Days",
+                            "name": "days",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "days",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        },
+                        {
+                            "key": "field_61eeebb4388a9",
+                            "label": "Hours",
+                            "name": "hours",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 1,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "hours",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_61eee52ce489c",
+                    "label": "Style",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_61eee2297a8f9",
+                    "label": "Message Type",
+                    "name": "message_display",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "banner": "Banner",
+                        "modal": "Modal"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_61eee2557a8fa",
+                    "label": "Banner Style",
+                    "name": "banner_style",
+                    "type": "select",
+                    "instructions": "Set the banner style.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "banner"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "danger": "Danger",
+                        "warning": "Warning",
+                        "success": "Success",
+                        "info": "Info"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_61eee27b7a8fc",
+                    "label": "Modal Style",
+                    "name": "modal_style",
+                    "type": "select",
+                    "instructions": "Set the modal style.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "box": "Box",
+                        "full": "Full",
+                        "existing": "Use Existing"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_61eee2aa7a8fe",
+                    "label": "Modal ID",
+                    "name": "modal_id",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            },
+                            {
+                                "field": "field_61eee27b7a8fc",
+                                "operator": "==",
+                                "value": "existing"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "newsletter",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61eee597f8851",
+                    "label": "Modal Trigger",
+                    "name": "modal_trigger",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "load": "Page Load",
+                        "scroll": "User Scroll",
+                        "time": "Time Delay"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_61eee5f3f8853",
+                    "label": "Modal Trigger Delay",
+                    "name": "modal_trigger_delay",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            },
+                            {
+                                "field": "field_61eee597f8851",
+                                "operator": "==",
+                                "value": "time"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 5,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "seconds",
+                    "min": 0,
+                    "max": 20,
+                    "step": ""
+                },
+                {
+                    "key": "field_61eee9663889f",
+                    "label": "Modal Trigger Distance",
+                    "name": "modal_trigger_distance",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            },
+                            {
+                                "field": "field_61eee597f8851",
+                                "operator": "==",
+                                "value": "scroll"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 5,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "%",
+                    "min": 0,
+                    "max": 100,
+                    "step": ""
+                },
+                {
+                    "key": "field_61eeea83388a2",
+                    "label": "",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            },
+                            {
+                                "field": "field_61eee597f8851",
+                                "operator": "==",
+                                "value": "load"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
+                },
+                {
+                    "key": "field_61eee559e489d",
+                    "label": "Content",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_61eee3ae7a908",
+                    "label": "Modal Heading",
+                    "name": "modal_heading",
+                    "type": "text",
+                    "instructions": "Set the modal heading.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            },
+                            {
+                                "field": "field_61eee27b7a8fc",
+                                "operator": "!=",
+                                "value": "existing"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61eee3d77a90b",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "Set the content of the message. Character Limit: 300.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee27b7a8fc",
+                                "operator": "!=",
+                                "value": "existing"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_61eee3477a901",
+                    "label": "Modal Image",
+                    "name": "modal_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            },
+                            {
+                                "field": "field_61eee27b7a8fc",
+                                "operator": "!=",
+                                "value": "existing"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_61eee3777a904",
+                    "label": "Alternate Mobile Image",
+                    "name": "modal_mobile_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            },
+                            {
+                                "field": "field_61eee3477a901",
+                                "operator": "!=empty"
+                            },
+                            {
+                                "field": "field_61eee27b7a8fc",
+                                "operator": "!=",
+                                "value": "existing"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_61ef3a5335092",
+                    "label": "Assign To",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_61eeec07388aa",
+                    "label": "Location",
+                    "name": "location",
+                    "type": "relationship",
+                    "instructions": "Determine where the modal will appear.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c0802c454722",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_61eee2297a8f9",
+                                "operator": "==",
+                                "value": "modal"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": "",
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "post_type",
+                        "taxonomy"
+                    ],
+                    "elements": [
+                        "featured_image"
+                    ],
+                    "min": "",
+                    "max": "",
+                    "return_format": "id"
+                }
+            ]
+        },
+        {
+            "key": "field_61ef329dc13a7",
+            "label": "Schedule",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61f972be22f20",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61ef3331c13a9",
+            "label": "Start Date\/Time",
+            "name": "message_start",
+            "type": "date_time_picker",
+            "instructions": "Set the message start date and time.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "Y-m-d H:i:s",
+            "first_day": 1
+        },
+        {
+            "key": "field_61ef33a6c13aa",
+            "label": "End Date\/Time",
+            "name": "message_end",
+            "type": "date_time_picker",
+            "instructions": "Set the message end date and time.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y g:i a",
+            "return_format": "F j, Y g:i a",
+            "first_day": 1
+        },
+        {
+            "key": "field_61ef33c4c13ab",
+            "label": "Cookie Expiry",
+            "name": "message_expiry",
+            "type": "group",
+            "instructions": "Set to zero to create a session cookie instead of time-based expiry.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61ef349fc13ac",
+                    "label": "Days",
+                    "name": "days",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "days",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_61ef34b6c13ad",
+                    "label": "Hours",
+                    "name": "hours",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "hours",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                }
+            ]
+        },
+        {
+            "key": "field_61ef352fc13ae",
+            "label": "Restrict to Pages",
+            "name": "message_pages",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "filters": "",
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
+        },
+        {
+            "key": "field_61ef3548c13af",
+            "label": "Style",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61f972be22f20",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61ef357fc13b0",
+            "label": "Message Type",
+            "name": "message_display",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Banner",
+                "modal": "Modal"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": 0,
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_61ef35e1c13b1",
+            "label": "Style",
+            "name": "message_style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "0"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "danger": "Danger",
+                "warning": "Warning",
+                "success": "Success",
+                "info": "Info"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_61ef35fcc13b3",
+            "label": "Modal Style",
+            "name": "message_modal_style",
+            "type": "select",
+            "instructions": "Set the modal style.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "box": "Box",
+                "full": "Full",
+                "existing": "Use Existing"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_61ef3685c13b5",
+            "label": "Modal ID",
+            "name": "message_modal_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    },
+                    {
+                        "field": "field_61ef35fcc13b3",
+                        "operator": "==",
+                        "value": "existing"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "newsletter",
+            "prepend": "#",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61ef36acc13b8",
+            "label": "Modal Trigger",
+            "name": "message_modal_trigger",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "load": "Page Load",
+                "scroll": "User Scroll",
+                "time": "Time Delay"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_61ef36c7c13ba",
+            "label": "Modal Trigger Delay",
+            "name": "message_modal_trigger_delay",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    },
+                    {
+                        "field": "field_61ef36acc13b8",
+                        "operator": "==",
+                        "value": "time"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "placeholder": "",
+            "prepend": "",
+            "append": "seconds",
+            "min": 0,
+            "max": 20,
+            "step": ""
+        },
+        {
+            "key": "field_61ef36f8c13bd",
+            "label": "Modal Trigger Distance",
+            "name": "message_modal_trigger_distance",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    },
+                    {
+                        "field": "field_61ef36acc13b8",
+                        "operator": "==",
+                        "value": "scroll"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "placeholder": "",
+            "prepend": "",
+            "append": "%",
+            "min": "",
+            "max": 100,
+            "step": ""
+        },
+        {
+            "key": "field_61ef3724c13c0",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    },
+                    {
+                        "field": "field_61ef36acc13b8",
+                        "operator": "==",
+                        "value": "load"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_61ef3746c13c3",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61f972be22f20",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61ef3751c13c4",
+            "label": "Content",
+            "name": "message_content",
+            "type": "textarea",
+            "instructions": "Set the content of the message. Character Limit: 300.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "0"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 300,
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_61ef3779c13c6",
+            "label": "Image",
+            "name": "message_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    },
+                    {
+                        "field": "field_61ef35fcc13b3",
+                        "operator": "!=",
+                        "value": "existing"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61ef379cc13c9",
+            "label": "Alternate Mobile Image",
+            "name": "message_image_mobile",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    },
+                    {
+                        "field": "field_61ef3779c13c6",
+                        "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_61ef35fcc13b3",
+                        "operator": "!=",
+                        "value": "existing"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_61ef37cac13ce",
+            "label": "Heading",
+            "name": "message_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    },
+                    {
+                        "field": "field_61ef35fcc13b3",
+                        "operator": "!=",
+                        "value": "existing"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61ef37e9c13d1",
+            "label": "Content",
+            "name": "message_wysiwyg",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef357fc13b0",
+                        "operator": "==",
+                        "value": "modal"
+                    },
+                    {
+                        "field": "field_61ef35fcc13b3",
+                        "operator": "!=",
+                        "value": "existing"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_61ef3808c13d4",
+            "label": "Link",
+            "name": "message_link",
+            "type": "link",
+            "instructions": "Set an optional link that will be appended to the end of your message content.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c0802c454722",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61ef35fcc13b3",
+                        "operator": "!=",
+                        "value": "existing"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-messaging"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Message Value Object Attributes",
+    "show_in_rest": 0,
+    "modified": 1643738052
+}

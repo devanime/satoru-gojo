@@ -1,0 +1,121 @@
+{
+    "custom_post_types": {
+        "event": {
+            "labels": {
+                "singular_name": "Event"
+            },
+            "args": {
+                "public": true,
+                "exclude_from_search": false,
+                "publicly_queryable": true,
+                "show_ui": true,
+                "show_in_nav_menus": true,
+                "show_in_menu": true,
+                "show_in_admin_bar": true,
+                "hierarchical": false,
+                "has_archive": false,
+                "rewrite": true,
+                "can_export": true,
+                "show_in_rest": false,
+                "supports": [
+                    "title",
+                    "editor",
+                    "thumbnail",
+                    "excerpt",
+                    "revisions"
+                ],
+                "taxonomies": [
+                    "category",
+                    "post_tag"
+                ],
+                "menu_position": 21,
+                "menu_icon": "dashicons-calendar-alt"
+            },
+            "extras": {
+                "acf_settings": "Event Settings",
+                "admin_columns": {
+                    "venue_id": {
+                        "label": "Venue",
+                        "sortable": true
+                    },
+                    "start_date": {
+                        "label": "Performance Date(s)",
+                        "sortable": true
+                    }
+                }
+            }
+        },
+        "venue": {
+            "labels": {
+                "singular_name": "Venue",
+                "all_items": "Venues"
+            },
+            "args": {
+                "public": true,
+                "exclude_from_search": false,
+                "publicly_queryable": true,
+                "show_ui": true,
+                "show_in_nav_menus": true,
+                "show_in_menu": "edit.php?post_type=event",
+                "show_in_admin_bar": true,
+                "hierarchical": false,
+                "has_archive": false,
+                "rewrite": true,
+                "can_export": true,
+                "show_in_rest": false,
+                "supports": [
+                    "title",
+                    "editor",
+                    "thumbnail",
+                    "excerpt"
+                ],
+                "menu_position": 5,
+                "menu_icon": "dashicons-building"
+            },
+            "extras": []
+        }
+    },
+    "taxonomies": {
+        "genre": {
+            "post_types": [
+                "event"
+            ],
+            "labels": {
+                "singular_name": "Genre"
+            },
+            "args": {
+                "public": true,
+                "show_ui": true,
+                "show_in_menu": true,
+                "show_in_nav_menus": false,
+                "show_tagcloud": true,
+                "show_in_quick_edit": true,
+                "hierarchical": false,
+                "rewrite": true,
+                "show_admin_column": true,
+                "meta_box_cb": false
+            }
+        },
+        "availability": {
+            "post_types": [
+                "event"
+            ],
+            "labels": {
+                "name": "Availability",
+                "singular_name": "Availability"
+            },
+            "args": {
+                "public": true,
+                "show_ui": true,
+                "show_in_menu": true,
+                "show_in_nav_menus": false,
+                "show_tagcloud": true,
+                "show_in_quick_edit": true,
+                "hierarchical": false,
+                "rewrite": true,
+                "show_admin_column": false,
+                "meta_box_cb": false
+            }
+        }
+    }
+}
