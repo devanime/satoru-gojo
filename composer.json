@@ -1,6 +1,6 @@
 {
     "name": "devanime/satoru-gojo",
-    "description": "A DevAnime plugin containing a collection of content management models.",
+    "description": "Various supporting backend infrastructure that can be used accordingly for website builds.",
     "authors": [
         {
             "name": "DevAnime",
