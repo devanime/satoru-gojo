@@ -25,7 +25,6 @@
     "type": "wordpress-plugin",
     "require": {
         "php": "^8.2",
-        "devanime/devanime": "dev-master",
         "vimeo/vimeo-api": "2.*",
         "madcoda/php-youtube-api": "*"
     }
